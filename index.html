@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>JORGY OTAWAS</title>
+    <link rel="stylesheet" type="text/css" href="CSS.html">
+  </head>
+  <style>
+
+	html {
+		height: 100%;
+		overflow: hidden;
+	}
+
+	body {
+		margin: 0;
+		padding: 0;
+		height: 100%;
+		font-family: Merriweather;
+		perspective: 1px;
+		transform-style: preserve-3d;
+		overflow-y: scroll;
+		overflow-x: hidden;
+	}
+
+	h1{
+		font-size: 270%;
+
+	}
+
+	p {
+		font-size: 140%;
+		line-height: 150%;
+		color: 	#000000;
+		box-shadow: 0 -1px 10px rgba(0, 5, 2, .7);
+	}
+
+	.slide {
+		position: relative;
+		padding: 25vh 10%;
+		min-height: 100vh;
+		width: 100vw;
+		box-sizing: border-box;
+		box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
+		transform-style: inherit;
+	}
+
+	.img1 {
+	  position: relative;
+	  top: 60%;
+	  left: 40%;
+	  width: 200px;
+	  height: 240px;
+	  transform: scale(.75) translateZ(.25px) translateX(-94%) translateY(-100%) rotate(2deg);
+	  padding: 10px;
+	  border-radius: 7px;
+	  background: rgba(240, 230, 220, .7);
+	  box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+	}
+	
+	.img2 {
+	  position: relative;
+	  top: 60%;
+	  left: 40%;
+	  width: 200px;
+	  height: 240px;
+	  transform: scale(.75) translateZ(.25px) translateX(-94%) translateY(-100%) rotate(2deg);
+	  padding: 10px;
+	  border-radius: 7px;
+	  background: rgba(240, 230, 220, .7);
+	  box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+	}
+	.img3 {
+	  position: relative;
+	  top: 60%;
+	  left: 40%;
+	  width: 200px;
+	  height: 240px;
+	  transform: scale(.75) translateZ(.25px) translateX(-94%) translateY(-100%) rotate(2deg);
+	  padding: 10px;
+	  border-radius: 4px;
+	  background: rgba(240, 230, 220, .7);
+	  box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+	}
+	.img4 {
+	  position: relative;
+	  top: 60%;
+	  left: 40%;
+	  width: 200px;
+	  height: 240px;
+	  transform: scale(.75) translateZ(.25px) translateX(-94%) translateY(-100%) rotate(2deg);
+	  padding: 10px;
+	  border-radius: 4px;
+	  background: rgba(240, 230, 220, .7);
+	  box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+	}
+	
+	/*.img {
+	  transform: scale(.75) translateZ(.25px) translateX(-94%) translateY(-100%) rotate(2deg);
+	  padding: 10px;
+	  border-radius: 5px;
+	  background: rgba(240, 230, 220, .7);
+	  box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+	}*/
+
+	.img1{
+		position: absolute;
+		top: 60%;
+		left: 75%;
+		width: 620px;
+		height: 340px;
+	}
+
+	.img2{
+		position: absolute;
+		top: 60%;
+		left: 82%;
+		width: 440px;
+		height: 480px;
+	}
+	
+	.img3{
+		position: absolute;
+		top: 65%;
+		left: 35%;
+		width: 440px;
+		height: 480px;
+	}
+	.img4{
+		position: absolute;
+		top: 60%;
+		left: 75%;
+		width: 420px;
+		height: 240px;
+	}
+	
+	/*img:last-of-type{
+        transform: scale(.6) translateZ(.4px) translateX(-104%) translateY(-40%) rotate(-5deg);
+	}*/
+
+	.slide::before {
+		content: "";
+		position: relative;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		box-shadow: 0 0 8px 1px rgba(0, 0, 0, .7);
+	}
+
+	.title {
+		width: 50%;
+		padding: 5%;
+		border-radius: 5px;
+		background: rgba(240, 230, 000, 0.7);
+		box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+	}
+
+	.slide:nth-child(2n) .title {
+		margin-left: 0;
+		margin-right: auto;
+	}
+
+	.slide:nth-child(2n+1) .title {
+		margin-left: auto;
+		margin-right: 0;
+	}
+
+	.slide, .slide::before {
+		background: 50% 50% / cover;
+	}
+
+	.header {
+		text-align: center;
+		font-size: 175%;
+		color: #FFF;
+		text-shadow: 0 2px 2px #000;
+	}
+
+	.foot{
+		text-align: center;
+		font-size: 200%;
+		color: #FFF;
+		text-shadow: 0 2px 2px #000;
+	}
+
+	#title{
+		background-image: url("gatop.jpg");
+		z-index: 2;
+	}
+
+	#title h1 {
+		transform: translateZ(.25px) scale(.75);
+		transform-origin: 50% 100%;
+		color: 	#FFFF00;
+	}
+
+	#slide2::before {
+		transform: translateZ(-1px) scale(2);
+	}
+	#slide2 {
+		background-image: url("perfil.png");
+		transform: translateZ(-1px) scale(2);
+		
+	}
+	#slide3 {
+		background-image: url("imagem2.jpg");
+	z-index: 2;
+	}
+
+	#slide4 {
+		background-image: url("foto1.jpg");
+		transform: translateZ(-1px) scale(2);
+	}
+	
+	#slide5 {
+		background-image: url("imagem3.jpg");
+		z-index: 2;
+	}
+	
+	#slide6 {
+		background-image: url("email.jpg");
+		transform: translateZ(-1px) scale(2);
+	}
+	
+	#slide7 {
+	  background: #222;
+	}
+	</style>
+	
+    <body>
+    <div id="title" class="slide header">
+      <h1> Página oficial do Jorgy Otawas </h1>
+    </div>
+	<div id="slide2" class="slide">
+	<div class="title">
+    <img class="img1" src= "perfil.png" width="30%"> 
+      <p>
+          <b>Nome:</b> Jorgy Otawas      <br/>
+          <b>Idade:</b> 13 anos          <br/>
+          <b>Endereço:</b> Rua 0 - Paris <br/>
+          <b>Experiência:</b> 7 anos     <br/>
+          <b>Degree:</b> Ensino Médio    <br/>
+          <b>E-mail:</b> jorgy@gmail.com <br/>
+		  <b>Telefone:</b> 011 3345-8965 <br/>
+      </p>
+    </div>
+	</div>
+
+    <div id="slide3" class="slide">
+	<div class="title">
+        <h1> Quem Sou</h1>
+        <p> Meu trabalho é ajudar proprietários de negócios bem-sucedidos
+            como você a se tornarem grandes heróis para seus leitores, suas
+            empresas e para si próprios, escrevendo e publicando livros de
+            alta qualidade que mudarão vidas, ganharão dinheiro e
+            impulsionarão o crescimento nos próximos anos.
+            <br/><br/>
+            Eu atuo como consultor, coach, parceiro de projeto, Sherpa,
+            mestre Jedi, professor de Feitiços, sargento instrutor, maestro, professor e
+            muito mais... tudo em nome para ajudá-lo a escrever o  seu melhor livro
+            e auxiliar-te a publicar o seu livro que irá trazer muito sucesso para o escritor.
+        </p>
+    </div>
+	</div>
+
+   <div id="slide4" class="slide">
+   <div class="title">
+        <h1> Meus Trabalhos </h1>
+        <p> Não tenho formação acadêmica, mas sei como escrever livros,
+            pois escrevi muita coisa ao longo da minha vida. Pois desde a minha infância 
+			fui motivado a escrever.
+            <br/><br/>
+            Minha obra prima foi a criação de um livro de como
+            escrever livros e só isso, por enquanto. Penso em fazer muito
+            mais e para isso posso lhe ajudar a escrever o seu livro.
+            <br/><br/>
+            Ah... também plantei uma árvore e denominei ela como OTAWAS.
+        </p>
+		 <img class="img2" src= "livro1.png" width="20%"> 
+    </div>
+	</div>
+	<div id="slide5" class="slide">
+	<div class="title">
+        <h1> Experiência </h1>
+        <p> Como uma experiência auxiliei, uma lindo autor chamado Charles
+			Duhigg , a escrever o seu livro sobre coach. 
+            <br/><br/>
+            Em sua obra ela escreveu, sobre como ter hábitos de estudos
+			e uma vida produtiva diariamente. Claro, ela observou a situação
+			de cada alunos, estudante e trabalhador. Sendo feita, uma grande pesquisa
+			antes de colocar a escrita em ação.
+            <br/><br/>
+            Atualmente, já foram vendidos trezentos mil exemplares.
+        </p>
+		<img class="img3" src= "livro2.jpg" width="30%"> 
+    </div>
+	</div>
+   <div id="slide6" class="slide">
+   <div class="title">
+      <h1> Contato </h1>
+      <p>
+        Se você tiver uma pergunta específica, envie-me um e-mail para
+        jorgy@gmail.com
+        <br/>
+        Eu ou alguém da minha equipe entrará em contato com você em
+        breve!
+      </p>
+	  <img class="img4" src= "email.jpg" width="25%"> 
+    </div>
+	</div>
+	<div id="slide7" class="slide foot">
+			<h5> Site: JORGY OTAWAS - Web Site - 2021. <br>
+			<br> Criado por: ANA CAROLINA RAMALHO DA SILVA- HT3003957 
+			<br> FLAVIA ARAÚJO PORTO- HT3006841</h5>
+	</div>
+  </body>
+</html>
